@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------------------------------//
+//                                      Home.css                                        //
+//--------------------------------------------------------------------------------------*/
+
+/* Home - Main container */
+.home {
+    position: relative;
+    margin-top: var(--navbar-height);
+    height: clamp(240px, 60.5vw, 810px);
+    overflow: hidden;
+    flex-direction: row;
+}
+
+/* Home Image - Image of the user */
+.home-image {
+    display: flex;
+    position: absolute;
+    bottom: 50;
+    left: 59%;
+    height: clamp(210px, 53vw, 690px);
+    filter: brightness(97%) drop-shadow(12px 12px 5px rgba(0, 0, 0, 0.5));
+    opacity: 0; /* Hide image until animation */
+}
+.home-image.dark-mode {
+    filter: brightness(88%) drop-shadow(12px 12px 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Animate Home Image - Animation for home image */
+.animate-home-image {
+    animation: baseFadeInSlideLeft .85s ease-out forwards;
+    opacity: 1; /* Hide image until animation */
+}
+
+/* Home Left - Left side of the home page */
+.home__left {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 65%;
+}
+
+/* Text Container - Container for text */
+.home__text-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    white-space: nowrap; /* Prevent words from stacking */
+    opacity: 0;
+}
+
+/* Animate Text Container - Animation for text container */
+.animate-home-text-container {
+    animation: baseFadeInSlideRight .85s ease-out forwards;
+    opacity: 0; /* Hide image until animation */
+}
+
+/* Block Wrapper - Text wrapper to maintain block shape */
+.block-wrapper {
+    display: block;
+}
+
+/* Text Name - User's name */
+.home__text-name {
+    position: relative;
+    margin: 0 0 .4rem 0;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.3rem, 5.5vw, 3.7rem); 
+}
+
+/* Text Alias - User's alias or title */
+.home__text-alias {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 1.5px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 300;
+    font-size: clamp(1rem, 3.4vw, 2.05rem);
+}

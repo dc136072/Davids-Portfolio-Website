@@ -1,0 +1,141 @@
+.skills {
+    height: clamp(500px, 52vw, 600px);
+}
+
+/* The header at the top of the section */
+.skills-header {
+    margin-top: clamp(1rem, 1.5vw, 2rem);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start off invisible before animation */
+}
+
+/* Container for all of the skills categories */
+.skills-category-container {
+    display: flex;
+    height: 450px;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    padding: clamp(.5rem, 2vw, 2rem);
+    padding-top: 0;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+/* Container for each individual skill */
+.skills-category {
+    padding: clamp(0.2rem, .5vw, .7rem);
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 20%;
+    max-width: 320px;
+
+    opacity: 0;
+
+}
+    .animate-skills-category-right {
+        animation: baseFadeInSlideRight 1.5s ease;
+        opacity: 1;
+    }
+    .animate-skills-category-left {
+        animation: baseFadeInSlideLeft 1.5s ease;
+        opacity: 1;
+    }
+
+
+/* Icon for each skill */
+.skills img {
+    width: clamp(5rem, 10vw, 7rem);
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    padding: .2rem;
+
+}
+
+
+/* Title for each skill */
+.skills-category-container h2 {
+    font-size: clamp(1rem, 2.8vw, 1.7rem);
+    font-weight: 400;
+    margin: 0;
+    margin-top: 0rem;
+}
+/* Description for each skill */
+.skills-category p {
+    font-family: 'Thasadith', sans-serif;
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+    padding-top: .7rem;
+    display: flex;
+    text-align: justify;
+}
+
+@media (max-width: 850px) {
+    .skills {
+        height: clamp(800px, 103vw, 880px);
+    }
+    .skills-header {
+        margin-top: 2.5rem;
+    }
+    .skills-category-container {
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: clamp(0.6rem, 4vw, 3rem);
+        align-items: center;
+    }
+    .skills-category {
+        height: 28%;
+        width: 100%;
+        max-width: 630px;
+        margin: 0;
+        flex-direction: row;
+        display: flex;
+    }
+    .skills-icon-header-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.6rem;
+        width: clamp(7rem, 30vw, 10rem);
+    }
+    .skills img {
+        align-self: center;
+        width: clamp(3.6rem, 10vw, 5.6rem);
+    }
+    .skills-category h2 {
+        font-size: clamp(1rem, 3.3vw, 1.3rem);
+        margin-top: 0.2rem;
+    }
+    .competing {
+        letter-spacing: clamp(0.7px, 1.5vw, 1px);
+    }
+    /* Skill Description Text Block*/
+    .skills-category p {
+        margin: 1rem;
+        text-align:justify;
+        align-self: center;
+        font-size: clamp(.8rem, 3vw, 1.3rem);
+        width: clamp(15rem, 65vw, 30rem);
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+    }
+}
+
+/* Responsive Height */ 
+@media (max-width: 700px) { .skills { height: 760px; } }
+@media (max-width: 600px) { .skills { height: 730px; } }
+@media (max-width: 550px) { .skills { height: 715px; } }
+@media (max-width: 500px) { .skills { height: 700px; } }
+@media (max-width: 440px) { .skills { height: 670px; } }
+@media (max-width: 420px) { .skills { height: 660px; } }
+@media (max-width: 390px) { .skills { height: 570px;    .skills-category-container { gap: 0px;}} }
+@media (max-width: 360px) { .skills { height: 560px; } }
+@media (max-width: 300px) { .skills { height: 595px; } }

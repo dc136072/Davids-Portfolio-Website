@@ -1,0 +1,120 @@
+/*--------------------------------------------------------------------------------------//
+//                                     AppColors.css                                    //
+//                                  Manage all colors here.                             //
+//--------------------------------------------------------------------------------------*/
+
+
+
+/* Root - Variables to be reused for all sections */
+:root {
+  --app-light-mode-color: rgb(245, 245, 245); 
+  --app-dark-mode-color: rgb(30, 30, 30);
+}
+
+/* All HTML tags */
+*.dark-mode { color: white;}
+
+/* HTML of entire app */
+html { background-color: rgb(255, 255, 255);}
+html.dark-mode, body.dark-mode { background-color: (--app-dark-mode-color); }
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 { color: black; }
+h1.dark-mode, h2.dark-mode, h3.dark-mode { color: white; }
+
+/* Animate Header - Animation for headers for sections */
+.animate-header { color: black; }
+.animate-header.dark-mode {color: white;}
+
+/* Section Headers - Headers for each section */
+.section-subheader a {color: blue;}  
+
+/* Links */
+a {color: rgb(0, 112, 241);}
+a.dark-mode {color: rgb(1, 98, 210);}
+
+/* Navigation Bar */
+.navbar { background-color: var(--app-dark-mode-color); }
+.navbar__list li { color: white; }
+
+.navbar__list li:active { background-color: rgb(189, 189, 189); }
+.navbar .slider { background-color: #ccc; }
+.navbar .slider:before { background-color: white; }
+.navbar__link-active, .navbar__list li.navbar__link-active a { background-color: white; color: black; }
+.navbar__list li:hover { background-color: rgb(255, 255, 255); color: black;}
+
+/* Home */
+.home { 
+  background-color: var(--app-light-mode-color);
+  box-shadow: clamp(0.5px, 0.5vw, 1px) clamp(0.5px, 0.5vw, 1.5px) clamp(2px, 0.8vw, 5px)  clamp(0.5px, 0.5vw, 1.5px) 
+    rgba(61, 61, 61, 0.2);
+}
+.home.dark-mode { 
+  background-color: var(--app-dark-mode-color);
+  box-shadow: clamp(0.5px, 0.5vw, 1px) clamp(0.5px, 0.5vw, 2.5px) clamp(2px, 0.8vw, 3px)  clamp(0.5px, 0.5vw, 1.5px) 
+  rgba(0, 0, 0, 0.2);
+}
+
+/* About, Skills */
+.skills, .about { background-color: white; }
+.skills.dark-mode, .about.dark-mode { background-color: rgb(65, 65, 65); }
+
+/* About */
+.about .speechBubble p {color: black;}
+
+/* Skills */
+.skills { border-bottom: clamp(1px, 0.5vw, 3.5px) solid rgb(239, 239, 239); }
+.skills.dark-mode {border-bottom: clamp(1px, 0.5vw, 3.5px) solid rgb(45, 45, 45); }
+
+
+/* Projects */
+.projects { 
+  background-color: var(--app-light-mode-color); 
+  border-bottom: clamp(1px, 0.5vw, 3.5px) solid rgb(230, 230, 230); 
+}
+.projects.dark-mode { 
+  background-color: var(--app-dark-mode-color); 
+  border-bottom: clamp(1px, 0.5vw, 3.5px) solid rgb(8, 8, 8);
+  color: white; 
+}
+.projects__text-container { background-color: white;}
+.projects__text-container.dark-mode { background-color: black;}
+
+/* Contact */
+.contact { background-color: rgb(236, 236, 236); }
+.contact.dark-mode { background-color: rgb(21, 21, 21); }
+.contact-submit-button {
+    border-left: 1px solid black; 
+    border-right: 1px solid black; 
+    border-bottom: 1px solid black;
+    border-top: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-submit-button:hover { background-color: #414141; color: #fff;}
+.contact-submit-button.dark-mode { background-color: #515151; color: #fff; }
+.contact-info-text { background-color: var(--app-light-mode-color); }
+.contact-info-text.dark-mode { background-color: #414141; color: white; }
+.contact-email { color: gray; }
+.contact-email.dark-mode { color: rgb(227, 227, 255); }
+.contact-profile-picture-container { background-color: rgb(240, 240, 240);}
+.contact-profile-picture-container.dark-mode { background-color: rgb(32, 32, 32);}
+@media(max-width: 800px) {
+  .contact-info-text, .contact-info-text.dark-mode {
+    background-color: transparent;
+  }
+}
+/* Contact submit button */
+.contact-submit-button {
+  background-color: rgb(216, 216, 216); color: #000;
+  border-left: 1px solid black; border-right: 1px solid black; 
+  border-bottom: 1px solid black; border-top: none; }
+
+/* Contact Pop Up box for form submission */
+.popup { border: 1px solid black; background-color: white; color: black !important; }
+.popup button { background-color: rgb(216, 216, 216); color: #000; transition: background-color 0.3s ease; }
+.popup button:hover { background-color: #414141; color: #fff; }
+.popup-background { background-color: rgba(0, 0, 0, 0.5); }
+
+/* Footer */
+footer { color: white !important; background-color: black; }

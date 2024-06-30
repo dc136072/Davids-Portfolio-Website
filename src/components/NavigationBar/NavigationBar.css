@@ -1,0 +1,227 @@
+/*--------------------------------------------------------------------------------------//
+//                                NavigationBar.css                                    //
+//--------------------------------------------------------------------------------------*/
+
+:root {
+    --navbar-height: 2.4rem;
+}
+
+/* Navbar - Main container for the navigation bar */
+.navbar { 
+    display: flex;
+    height: var(--navbar-height);
+    width: 100%;
+    text-decoration: none;
+    position: fixed; /* Make navbar fixed */
+    top: 0;          /* Stick to the top */
+    z-index: 1000;   /* Ensure it stays on top of everything */
+
+}
+.navbar.dark-mode{
+    border-bottom: 1.5px solid gray;
+}
+
+
+/* Wrapper for the entire navigation bar except the light/dark switch */
+/* Used to change the overall width of the navbar to make space for switch */
+.navbar__list-wrapper {
+    width: 100%; 
+    margin-right: 5px;
+}
+
+/* The entire navigation bar except the light/dark switch */
+.navbar__list {
+    display: flex;
+    align-items: center; /* Align list items vertically */
+    flex: 1;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Style for each Link component, acting as a navigation item */
+.navbar__list a { 
+    flex: 1;
+    display: flex;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 500;
+    font-size: clamp(.65rem, 2vw, 1rem);
+    letter-spacing: clamp(0px, 0.05vw, 1px);
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit;
+}
+
+/* Each item (tab) in the navigation bar */
+.navbar__list li {
+    cursor: pointer;
+    width: 100%; /* Ensure the list item takes up full width */
+    height: 100%; /* Ensure the list item takes up full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove underline */
+}
+    .navbar__list li:hover {
+        transition: all 0.3s ease;
+    }
+
+/* Each active item (tab) in the navigation bar */
+.navbar__link-active, .navbar__list li.navbar__link-active a { 
+
+    position: relative; /* Ensure specificity for active state */
+}
+
+/* Wrapper for all items in the top right corner of the navigation bar */
+.top-right-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto; /* Fill up the rest of the navbar space */
+    height: 100%;
+
+}
+
+/* Logos for CSV, GitHub */
+.navbar-icon {
+    object-fit: cover;
+    object-position: center;
+    width: 32px;
+    aspect-ratio: 1/1;
+    margin: 10px 5px;
+    border: 1.5px solid white;
+    background-size: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+    .navbar-icon:hover {
+        box-shadow: 0 0 15px 5px white;
+        transition: all 0.3s ease;
+    }
+
+/* Logo for CSV */
+.navbar-icon.csv-icon {
+    width: 29px;
+    background-image: url('../../images/navigation_bar_images/csv_icon.png');
+    border-radius: 10%;
+    border: 1.5px solid white;
+}    
+
+/* Logo for LinkedIn */
+.navbar-icon.linkedin-icon {
+    background-image: url('../../images/navigation_bar_images/linkedin_icon.png');
+    background-color: white;
+}
+
+/* Logo for GitHub */
+.navbar-icon.github-icon {
+    background-image: url('../../images/navigation_bar_images/github_icon.png');
+}
+
+
+/*--------------------------------------------------------------------------------------//
+//                                  DarkModeToggle                                      //
+//--------------------------------------------------------------------------------------*/
+
+/* Container for the dark mode toggle switch */
+.toggle__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+    align-items: center;
+    width: 100%; /* Fill up the rest of the navbar space */
+}
+
+.toggleButton {
+    z-index: 1;         /* toggle button always stays on top of everything else */
+}
+
+/* Switch container */
+.switch { 
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    min-width: 60px;
+    max-width: 60px;
+    height: 33px;
+    z-index: 1; /* toggle button always stays on top of everything else */
+}
+
+/* Hide the checkbox input (since we want a toggle switch in this case) */
+.switch input {  
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Visual slider part of the toggle switch */
+.slider {
+    position: absolute; /* Absolute position within .switch */
+    cursor: pointer;
+    transition: .4s; /* Smooth transition for the sliding effect */
+    border-radius: 34px; /* Rounded borders for the slider */
+    width: 100%; /* Full width of the switch */
+    height: 100%; /* Full height of the switch */
+}
+
+/* Circle part of the toggle switch */
+.slider:before { 
+    position: absolute;
+    content: "";
+    width: 30px;
+    aspect-ratio: 1/1;
+    left: 1px;
+    bottom: 1px;
+
+    transition: .4s;
+    border-radius: 50%; /* Make it round */
+    background-image: url('../../images/navigation_bar_images/sun.png'); /* Sun icon */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Slider changes to sun/moon when the switch is in 'checked' state, i.e., dark mode is on */
+input:checked + .slider:before {
+    transform: translateX(27.5px);
+    background-image: url('../../images/navigation_bar_images/moon.png');
+}
+
+
+/* For smaller screens, shrink the icons. */
+@media (max-width: 700px) {
+    /* Logos */
+    .navbar-icon {
+        width: 27px;
+    }
+    .navbar-icon.csv-icon {
+        width: 24px;
+    }
+    /* Container for the dark mode toggle switch */
+    .switch {
+        width: 48px;
+        min-width: 51px;
+        max-width: 51px;
+        height: 28px;
+    }
+    /* Visual slider part of the toggle switch */
+    .slider:before {
+        width: 27px;
+        bottom: 0px;
+    }
+    /* Slider changes to sun/moon when the switch is in 'checked' state, i.e., dark mode is on */
+    input:checked + .slider:before {
+        transform: translateX(23px);
+    }
+    
+}
+
+/* Very small screens: Remove navigation buttons */
+@media (max-width: 600px) {
+    .navbar__list {
+        display: none;
+    }
+}

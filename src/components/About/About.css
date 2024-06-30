@@ -1,0 +1,114 @@
+/* About Section - Main container for the about section */
+.about {
+    display: flex;
+    align-items: center;
+    height: clamp(260px, 55vw, 650px);
+    min-height: 260px;
+    max-height: 650px;
+    padding-top: clamp(.6rem, 2vw, 1.4rem);
+}
+
+/* Header - Title for About section */
+.about__header {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    opacity: 0;
+    font-weight: 400;
+}
+
+/* Wrapper - Wrapper for left and right sides of the about page */
+.about__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transform: translateX(6%);
+}
+
+/* Left Side - Left part of the about page with picture and title */
+.about__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 27%;
+    height: 100%;
+    margin-left: 10px;
+    z-index: 0;
+    opacity: 0;
+    animation: baseFadeInSlideRight .7s ease-in-out;
+}
+
+.animate-about__left {
+    animation: baseFadeInSlideRight .7s ease-in-out;
+    opacity: 1;
+}
+
+.about__image-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    width: 100%;
+    max-width: 350px;
+    /* box-shadow: clamp(2px, 0.5vw, 5px) clamp(2px, 0.5vw, 5px) clamp(2px, 0.5vw, 4px) 0 rgba(0, 0, 0, 0.2); */
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translateY(-8%); /* Move image and container up */
+}
+
+.about img {
+    width: 93%; /* Increases the size of the image */
+    border-radius: 20%;
+    transform: translate(2%, 18.5%); /* +Right, +Down */
+}
+
+/* Right Side - Right side of the about page with text bubbles */
+.about__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* margin-left: 20px; */
+    margin-left: clamp(0.5rem, 2vw, 1.8rem);
+    height: 100%;
+    width: 50%;
+    aspect-ratio: 1/1;
+    font-size: clamp(0.6rem, 2vw, 1.45rem);
+    z-index: 0;
+}
+
+/* Typing Dots Wrapper - Container for text bubbles */
+.about__typing-dots-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    max-width: clamp(190px, 44vw, 565px);
+}
+
+/* On tiny screens, have the height for this section shrink faster */
+@media (max-width: 500px) {
+    .about {
+        height: clamp(200px, 62vw, 500px);
+    }
+}
+
+/* On smaller screens, move picture to the left */
+@media (max-width: 500px) {
+    .about__wrapper {
+        transform: translateX(3%);
+    }
+}
+/* On smaller screens, move picture to the left */
+@media (max-width: 400px) {
+    .about__wrapper {
+        transform: translateX(0%);
+    }
+}
