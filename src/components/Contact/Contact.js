@@ -4,11 +4,8 @@ import { useDarkMode } from '../../utils/DarkModeToggle/DarkModeContext';
 import useInView from '../../hooks/useInView';
 import classNames from 'classnames';
 import './Contact.css';
-
-// import kevinIconPng from '../../images/contact_images/kevin_smiling.png';
-// import kevinIconWebp from '../../images/contact_images/kevin_smiling.webp';
-import davidIconPng from '../../images/contact_images/David-smiling.png';
-import davidIconWebp from '../../images/contact_images/David-smiling.webp';
+import davidIconPng from '../../images/contact_images/david.png';
+import davidIconWebp from '../../images/contact_images/david.webp';
 
 function Contact() {
 const { isDarkMode } = useDarkMode(); // Get the global state for dark mode 
@@ -68,7 +65,7 @@ return (
                                 src={imageSrc}
                                 onError={handleError}
                                 className="contact-profile-picture"
-                                alt="Kevin Contact Icon"
+                                alt="David Contact Icon"
                             />
                         </div>
                     </div>
@@ -104,7 +101,7 @@ return (
                                 src={imageSrc}
                                 onError={handleError}
                                 className="contact-profile-picture"
-                                alt="Kevin Contact Icon"
+                                alt="David Contact Icon"
                             />
                         </div>
                     </div>

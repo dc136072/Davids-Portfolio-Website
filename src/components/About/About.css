@@ -62,9 +62,9 @@
 }
 
 .about img {
-    width: 93%; /* Increases the size of the image */
+    width: 50%; /* Increases the size of the image */
     border-radius: 20%;
-    transform: translate(2%, 18.5%); /* +Right, +Down */
+    transform: translate(1, 18.5%); /* +Right, +Down */
 }
 
 /* Right Side - Right side of the about page with text bubbles */

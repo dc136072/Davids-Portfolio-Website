@@ -14,8 +14,8 @@ import '../NavigationBar/NavigationBar.css';        // Import CSS for Navigation
 import '../../normalize.css';                       // Import normalize.css for CSS resets
 
 // Images
-import lightModeHomeImagePng from '../../images/home_images/david.png';         // Import normal mode image of me
-import lightModeHomeImageWebp from '../../images/home_images/david.webp';        // Import normal mode image of me in webp format
+import lightModeHomeImagePng from '../../images/home_images/David-Drawing.png';
+import lightModeHomeImageWebp from '../../images/home_images/David-Drawing.webp';
 
 function Home() {
     // States: Dark mode, check if Home in view, img based on dark mode, & webp support
@@ -24,7 +24,7 @@ function Home() {
     const isHomeInView = useInView(homeRef, { sectionName: 'home'});
     const [imageSrc, setImageSrc] = useState(lightModeHomeImageWebp);
     const [supportsWebP, setSupportsWebP] = useState(false); // Check if browser supports WebP
-    
+
 
     // On error: Set imageSrc to PNG if WebP fails to load
     const handleError = () => {
@@ -80,7 +80,7 @@ function Home() {
                             <ReactRotatingText items={[
                                 'Software Engineer',
                                 'Web Developer',
-                                'Computer Science Student',
+                                'UTD Alumni',
                                 ]} />
                         </p>
                     </div>
@@ -93,7 +93,7 @@ function Home() {
                 className={`home-image ${isHomeInView ? 'animate-home-image' : ''}`} 
                 draggable="false">
             </img>
-        </section>
+        </section>    
     );
 }
 

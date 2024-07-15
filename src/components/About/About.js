@@ -8,8 +8,9 @@ import './About.css';         // Import CSS for this About component
 import '../../App.css';       // Import general App CSS
 import './TypingDots.css';    // Import CSS for TypingDots component
 import '../../normalize.css'; // Import CSS to normalize styles across browsers
-import AboutPolaroidImageWebP from '../../images/about_images/David-smiling.webp'; // Import polaroid image
-import AboutPolaroidImagePNG from '../../images/about_images/David-smiling.png'; // Import polaroid image
+
+import AboutPolaroidImageWebP from '../../images/about_images/david.webp'; // Import polaroid image
+import AboutPolaroidImagePNG from '../../images/about_images/david.png'; // Import polaroid image
 
 // About Section Component
 function About() {
@@ -85,7 +86,7 @@ function About() {
                 {/* Left Side with polaroid image */}
                 <div className={aboutLeftClass} ref={aboutSpeechBubblesRef}>
                     <div className="about__image-container">
-                        <img src={supportsWebP ? AboutPolaroidImageWebP : AboutPolaroidImagePNG} alt="Kevin" draggable="false"/>
+                        <img src={supportsWebP ? AboutPolaroidImageWebP : AboutPolaroidImagePNG} alt="David" draggable="false"/>
                     </div>
                 </div>
                 {/* Right Side with Typing Dots Animation */}
