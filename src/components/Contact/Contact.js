@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-
 import { useDarkMode } from '../../utils/DarkModeToggle/DarkModeContext';
 import useInView from '../../hooks/useInView';
 import classNames from 'classnames';

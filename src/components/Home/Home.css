@@ -15,7 +15,7 @@
 .home-image {
     display: flex;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 53%;
     height: clamp(210px, 53vw, 690px);
     filter: brightness(97%) drop-shadow(12px 12px 5px rgba(0, 0, 0, 0.5));
