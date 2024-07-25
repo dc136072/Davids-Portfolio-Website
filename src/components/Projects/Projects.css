@@ -1,0 +1,41 @@
+/* Project variables */
+:root {
+    --projects-height: clamp(550px, 62vw, 800px);
+    --projects-min-height: 1000px;
+    --projects-text-container-width: clamp(300px, 38vw, 1200px);
+    --projects-text-container-max-width: 600px;
+    --projects-section-flex-direction: row;
+    --projects-left-min-width: 650px;
+    --projects-text-spacer-up: 0px;
+    --projects-title-padding: 16px;
+    --carousel-scale: 2.15; 
+    --carousel-base-width: 13.125rem;
+    --carousel-left-margin: 117px;
+    --carousel-bottom-margin: 0px;
+    --projects-left-min-width: 650px;
+}
+
+/* Projects */
+.projects {
+    position: relative;
+    height: var(--projects-height);
+    z-index: 0;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+/* Both Projects Headers and Subheaders - Title for section */
+.projects__header, .projects__subheader {
+    opacity: 0; /* Hide until animation */
+    display: flex;
+    align-self: center;
+}
+    /* Slide header when in view */
+    .animate-projects-header, .animate-projects-subheader {
+        animation: baseFadeInSlideDown .7s ease-out;
+        opacity: 1;
+    }
+
+.projects__subheader {
+    letter-spacing: 3px;
+}
