@@ -1,5 +1,5 @@
-# Portfolio Website
-A website about myself created with React, Node.js, HTML, CSS, and JavaScript. Currently in the deployment phase of development!!
+# Portfolio Website | Currently in the deployment phase of development!!
+A website about myself created with React, Node.js, HTML, CSS, and JavaScript.
 
 # Sections
 * Home - Introductory page
