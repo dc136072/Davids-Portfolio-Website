@@ -1,5 +1,5 @@
 # Portfolio Website
-A website about myself created with React, Node.js, HTML, CSS, and JavaScript
+A website about myself created with React, Node.js, HTML, CSS, and JavaScript. Currently in the deployment phase of development!!
 
 # Sections
 * Home - Introductory page
@@ -45,6 +45,5 @@ Davids-Portfolio-Website/
 - [React Rotating Text](https://www.npmjs.com/package/react-rotating-text?activeTab=readme) - The typing effect in the Home section
 - [Polaroid Wrapper](https://codepen.io/havardob/pen/jOwrXaJ ) - The polaroid image wireframe in the About section
 - [React Round Carousel](https://github.com/scriptex/react-round-carousel) - Base code for the carousel in the Projects section
-- [Netlify.com](https://www.netlify.com/) - The hosting service for the website
 - [Web3Forms.com](https://web3forms.com/) - The contact form service for the website
 
