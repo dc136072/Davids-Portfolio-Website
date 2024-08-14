@@ -12,10 +12,11 @@ import './Projects.css';
 
 // Slideshow images & video in webp format - Optimized for faster loading
 import InProgressWebp from '../../images/projects_images/slideshow_images/work-in-progress.webp';
+import GitHubWebp from '../../images/projects_images/slideshow_images/GitHub-logo.webp';
 
 // Backup slideshow imagesin png/ mp4 format - For browsers that don't support webp
 import InProgressPng from '../../images/projects_images/slideshow_images/work-in-progress.png';
-
+import GitHubPng from '../../images/projects_images/slideshow_images/GitHub-logo.png';
 
 
 // Gradient colors for each slide's captions
@@ -41,7 +42,6 @@ const project_data = [
     },
 
     { 
-        
         image: InProgressPng, 
         imageWebp: InProgressWebp,
         title: "Dialogue Pro",
@@ -54,6 +54,20 @@ const project_data = [
         ),
         captions: [
             { text: 'Personal', style: { background: rainbowGradient}},
+        ]
+    },
+
+    {
+        image: GitHubPng,
+        imageWebp: GitHubWebp,
+        title: 'Ideas',
+        description: (
+            <span> 
+               More to come.
+            </span>
+        ),
+        captions: [
+            { text: 'Ideas', style: { background: orangeGradient}},
         ]
     },
 

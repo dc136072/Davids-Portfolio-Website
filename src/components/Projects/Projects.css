@@ -374,10 +374,10 @@
     justify-content: center;
     align-content: center;
     position: absolute;
+    top: 0;
     right: 0;
     bottom: 0;
-    left: 0.625rem;
-    top: 0.625rem;
+    left: 0;
     user-select: none;
 }
 
